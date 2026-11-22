@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Online Food Ordering</title>
+  <meta name="description" content="Order pizza, burgers, Indian and Chinese food online from QuickBite. Fresh food delivered in about 30 minutes.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="QuickBite home">
+        <span class="logo-mark">Q</span>
+        QuickBite
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="nav-cart">Cart <span class="cart-count" aria-label="items in cart">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Hot, fresh food at your door in 30 minutes</h1>
+          <p>QuickBite cooks pizzas, burgers, Indian curries and Chinese favourites fresh for every order. Pick your dishes, and pay when they arrive.</p>
+          <div class="hero-buttons">
+            <a href="menu.html" class="btn">Order now</a>
+            <a href="about.html" class="btn btn-outline">Our story</a>
+          </div>
+          <ul class="hero-facts">
+            <li>Free delivery above &#8377;499</li>
+            <li>Open daily, 10 AM to 11 PM</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="A table spread with freshly cooked dishes" width="900" height="440">
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by category -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>What are you craving?</h2>
+          <p>Jump straight to your favourite kind of food.</p>
+        </div>
+        <div class="category-links">
+          <a href="menu.html?category=pizza">Pizza</a>
+          <a href="menu.html?category=burgers">Burgers</a>
+          <a href="menu.html?category=indian">Indian</a>
+          <a href="menu.html?category=chinese">Chinese</a>
+          <a href="menu.html?category=drinks">Drinks</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular food (cards are created by script.js) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Popular right now</h2>
+          <p>The dishes our customers order again and again.</p>
+        </div>
+        <div class="food-grid" id="popularGrid"></div>
+        <p class="section-link"><a href="menu.html" class="btn btn-outline">View full menu</a></p>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why people choose QuickBite</h2>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <h3>Cooked when you order</h3>
+            <p>Nothing is made in advance. Your dishes go on the stove only after your order reaches our kitchen.</p>
+          </div>
+          <div class="feature">
+            <h3>Delivered in about 30 minutes</h3>
+            <p>Our riders cover a 5 km area around the kitchen, so your food arrives hot.</p>
+          </div>
+          <div class="feature">
+            <h3>Honest prices</h3>
+            <p>Dishes start at &#8377;59. Delivery is free above &#8377;499 and &#8377;40 on smaller orders.</p>
+          </div>
+          <div class="feature">
+            <h3>Fresh ingredients</h3>
+            <p>Vegetables, paneer and chicken are bought from local suppliers every morning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer reviews -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>What our customers say</h2>
+        </div>
+        <div class="reviews">
+          <figure class="review">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>I ordered the Farmhouse pizza for a family dinner. It reached us hot and the crust was still crisp.</blockquote>
+            <figcaption>Riya Sharma<span>Ordered Farmhouse Veg Pizza</span></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>The butter chicken tastes like it was made at home. Good portion size for the price too.</blockquote>
+            <figcaption>Amit Verma<span>Ordered Butter Chicken</span></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" role="img" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <blockquote>Ordering is simple and the momos were great. The cold coffee was a nice extra on a hot day.</blockquote>
+            <figcaption>Neha Gupta<span>Ordered Chicken Momos and Cold Coffee</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Hungry? Pick your dishes and we will start cooking.</h2>
+        <a href="menu.html" class="btn">Order now</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>QuickBite</h3>
+        <p>Fresh pizzas, burgers, Indian curries and Chinese favourites, cooked when you order and delivered hot.</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact us</h3>
+        <p>42 Market Road, Civil Lines,<br>New Delhi 110054</p>
+        <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p>Email: <a href="mailto:hello@quickbite.example">hello@quickbite.example</a></p>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> QuickBite. A BCA web development college project. No real orders are taken and no payments are made.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

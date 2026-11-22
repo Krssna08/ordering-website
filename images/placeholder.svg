@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Food photo placeholder">
+  <rect width="600" height="400" fill="#f7e8d3"/>
+  <circle cx="300" cy="180" r="70" fill="none" stroke="#c9550b" stroke-width="8"/>
+  <circle cx="300" cy="180" r="38" fill="none" stroke="#c9550b" stroke-width="6"/>
+  <path d="M170 150v70m-14-70v30a14 14 0 0 0 28 0v-30m-14 30v40" stroke="#5a3a22" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M430 150c-20 10-24 40-6 56v14m6-70v70" stroke="#5a3a22" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <text x="300" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#5a3a22">QuickBite</text>
+</svg>

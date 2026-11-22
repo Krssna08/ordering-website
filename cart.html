@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | QuickBite</title>
+  <meta name="description" content="Review your QuickBite order and check out.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="QuickBite home">
+        <span class="logo-mark">Q</span>
+        QuickBite
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="nav-cart active" aria-current="page">Cart <span class="cart-count" aria-label="items in cart">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 id="cartHeading">Your cart</h1>
+        <p>Check your items, then place your order. You pay when the food arrives.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Shown when the cart has no items -->
+        <div class="empty-cart" id="cartEmpty" hidden>
+          <h2>Your cart is empty</h2>
+          <p>You have not added any dishes yet. Browse the menu and add something tasty.</p>
+          <a href="menu.html" class="btn">Browse the menu</a>
+        </div>
+
+        <!-- Shown when the cart has items -->
+        <div id="cartContent" hidden>
+          <div class="cart-layout">
+            <ul id="cartItems"></ul>
+
+            <aside class="summary-box" aria-label="Order summary">
+              <h2>Order summary</h2>
+              <div class="summary-row"><span>Subtotal</span><span id="subtotal">&#8377;0</span></div>
+              <div class="summary-row"><span>Delivery</span><span id="delivery">&#8377;0</span></div>
+              <div class="summary-row total"><span>Total</span><span id="total">&#8377;0</span></div>
+              <p class="free-note" id="freeNote"></p>
+              <button type="button" class="btn btn-block" id="checkoutBtn">Proceed to checkout</button>
+            </aside>
+          </div>
+
+          <!-- Checkout form (revealed by the checkout button) -->
+          <section class="checkout-box" id="checkoutSection" hidden>
+            <h2>Delivery details</h2>
+            <form id="checkoutForm" novalidate>
+              <div class="form-group">
+                <label for="customerName">Full name</label>
+                <input type="text" id="customerName" name="customerName" autocomplete="name">
+                <span class="error-msg" id="customerNameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="customerPhone">Mobile number</label>
+                <input type="tel" id="customerPhone" name="customerPhone" placeholder="10-digit number" autocomplete="tel" inputmode="numeric">
+                <span class="error-msg" id="customerPhoneError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="customerAddress">Delivery address</label>
+                <textarea id="customerAddress" name="customerAddress" rows="3" placeholder="House number, street, area, landmark" autocomplete="street-address"></textarea>
+                <span class="error-msg" id="customerAddressError"></span>
+              </div>
+
+              <fieldset class="payment-options">
+                <legend>Payment method</legend>
+                <label><input type="radio" name="payment" value="Cash on Delivery" checked> Cash on Delivery</label>
+                <label><input type="radio" name="payment" value="UPI on Delivery"> UPI on Delivery</label>
+                <label><input type="radio" name="payment" value="Card on Delivery"> Card on Delivery</label>
+              </fieldset>
+
+              <button type="submit" class="btn">Place order</button>
+            </form>
+          </section>
+        </div>
+
+        <!-- Shown after a successful order -->
+        <div class="confirmation" id="orderConfirmation" hidden>
+          <div class="confirm-tick" aria-hidden="true">&#10003;</div>
+          <h2>Thank you, <span id="confName"></span>!</h2>
+          <p>Your order has been placed. Your order ID is:</p>
+          <div class="order-id" id="confId"></div>
+          <div class="confirm-details">
+            <p><strong>Amount to pay:</strong> <span id="confTotal"></span></p>
+            <p><strong>Payment:</strong> <span id="confPayment"></span></p>
+            <p><strong>Delivering to:</strong> <span id="confAddress"></span></p>
+            <p><strong>Estimated time:</strong> 30 to 40 minutes</p>
+          </div>
+          <p><small>This is a demo project, so no real order has been placed.</small></p>
+          <a href="menu.html" class="btn">Order something else</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>QuickBite</h3>
+        <p>Fresh pizzas, burgers, Indian curries and Chinese favourites, cooked when you order and delivered hot.</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact us</h3>
+        <p>42 Market Road, Civil Lines,<br>New Delhi 110054</p>
+        <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p>Email: <a href="mailto:hello@quickbite.example">hello@quickbite.example</a></p>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> QuickBite. A BCA web development college project. No real orders are taken and no payments are made.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

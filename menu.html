@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | QuickBite</title>
+  <meta name="description" content="Browse the QuickBite menu: pizza, burgers, Indian, Chinese and drinks.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="QuickBite home">
+        <span class="logo-mark">Q</span>
+        QuickBite
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active" aria-current="page">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="nav-cart">Cart <span class="cart-count" aria-label="items in cart">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Our menu</h1>
+        <p>Choose a category or search for a dish by name. Prices are in Indian rupees.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="menu-toolbar">
+          <div class="filter-buttons" role="group" aria-label="Filter by category">
+            <button type="button" class="filter-btn active" data-category="all">All</button>
+            <button type="button" class="filter-btn" data-category="pizza">Pizza</button>
+            <button type="button" class="filter-btn" data-category="burgers">Burgers</button>
+            <button type="button" class="filter-btn" data-category="indian">Indian</button>
+            <button type="button" class="filter-btn" data-category="chinese">Chinese</button>
+            <button type="button" class="filter-btn" data-category="drinks">Drinks</button>
+          </div>
+          <div class="search-box">
+            <label for="searchInput" class="sr-only">Search dishes by name</label>
+            <input type="search" id="searchInput" placeholder="Search dishes, e.g. biryani" autocomplete="off">
+          </div>
+        </div>
+
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+        <!-- Cards are created by script.js from the PRODUCTS list -->
+        <div class="food-grid" id="menuGrid"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>QuickBite</h3>
+        <p>Fresh pizzas, burgers, Indian curries and Chinese favourites, cooked when you order and delivered hot.</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact us</h3>
+        <p>42 Market Road, Civil Lines,<br>New Delhi 110054</p>
+        <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p>Email: <a href="mailto:hello@quickbite.example">hello@quickbite.example</a></p>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> QuickBite. A BCA web development college project. No real orders are taken and no payments are made.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
